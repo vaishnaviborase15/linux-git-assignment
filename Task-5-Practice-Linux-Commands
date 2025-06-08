@@ -1,0 +1,85 @@
+vaishnaviborase@DESKTOP-7QRK0GV:~$ cd linux-git-assignment
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ mkdir practice-dir
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ cd practice-dir
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ touch file1.txt file2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ mkdir subdir1 subdir2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ mv file1.txt subdir1/
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ cp file2.txt subdir2/
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ echo "Linux is powerful" > subdir1/file1.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ cat subdir1/file1.txt
+Linux is powerful
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ head -n 1 subdir1/file1.txt.
+head: cannot open 'subdir1/file1.txt.' for reading: No such file or directory
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ tail -n 1 subdir1/file1.txt
+Linux is powerful
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ wc -w subdir1/file1.txt
+3 subdir1/file1.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ grep "Linux" subdir1/file1.txt
+Linux is powerful
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ find . -name "*.txt"
+./file2.txt
+./subdir1/file1.txt
+./subdir2/file2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ rm subdir2/file2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ rmdir subdir2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ chmod 744 subdir1/file1.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ ls -l subdir1/file1.txt
+-rwxr--r-- 1 vaishnaviborase vaishnaviborase 18 Jun  8 15:21 subdir1/file1.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ whoami
+vaishnaviborase
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ id
+uid=1000(vaishnaviborase) gid=1000(vaishnaviborase) groups=1000(vaishnaviborase),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),107(netdev)
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ ps aux | head
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  11116   896 ?        Ssl  10:11   0:00 /init
+root         5  0.0  0.0  11100   592 ?        Sl   10:11   0:00 plan9 --control-socket 6 --log-level 4 --server-fd 7 --pipe-fd 9 --socket-path /mnt/c/Users/Vaishnavi Borase/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc/LocalState/fsserver --log-truncate
+vaishna+   314  0.0  0.0  14112  2224 ?        S    11:15   0:00 -bash
+root       361 66.5  0.0  22040  3504 ?        R    11:18 163:21 sudo su - devuser
+root       362  0.0  0.0  22040   288 pts/0    Ss   11:18   0:00 sudo su - devuser
+root       363  0.0  0.0  14864  1976 pts/0    S    11:18   0:00 su - devuser
+devuser    364  0.0  0.0  14112  2400 pts/0    S    11:18   0:00 -bash
+root       991  0.0  0.0  11116   408 tty2     Ss   15:19   0:00 /init
+vaishna+   992  0.0  0.0  14112  3840 tty2     S    15:19   0:00 -bash
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ top  # (Press 'q' to quit)
+top - 15:26:39 up  5:15,  0 user,  load average: 0.52, 0.58, 0.59
+Tasks:  10 total,   2 running,   8 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.3 us, 13.6 sy,  0.0 ni, 82.7 id,  0.0 wa,  0.4 hi,  0.0 si,  0.0 st
+MiB Mem :   7998.3 total,   2230.8 free,   5767.5 used,    224.0 buff/cache
+MiB Swap:  24576.0 total,  23793.7 free,    782.3 used.   2230.8 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  361 root      20   0   22040   3504   3344 R  98.1   0.0 165:53.57 sudo
+    1 root      20   0   11116    896    836 S   0.0   0.0   0:00.32 init(Ubuntu)
+    5 root      20   0   11100    592    456 S   0.0   0.0   0:00.00 init
+  314 vaishna+  20   0   14112   2228   2100 S   0.0   0.0   0:00.31 bash
+  362 root      20   0   22040    292    240 S   0.0   0.0   0:00.00 sudo
+  363 root      20   0   14864   1976   1952 S   0.0   0.0   0:00.14 su
+  364 devuser   20   0   14112   2404   2112 S   0.0   0.0   0:00.19 bash
+  991 root      20   0   11116    408    360 S   0.0   0.0   0:00.00 SessionLeader
+  992 vaishna+  20   0   14112   3840   3756 S   0.0   0.0   0:00.10 bash
+ 1024 vaishna+  20   0   17312   3848   1652 R   0.0   0.0   0:00.12 top
+
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          233G  116G  117G  50% /
+none            233G  116G  117G  50% /dev
+none            233G  116G  117G  50% /run
+none            233G  116G  117G  50% /run/lock
+none            233G  116G  117G  50% /run/shm
+none            233G  116G  117G  50% /run/user
+tmpfs           233G  116G  117G  50% /sys/fs/cgroup
+C:\             233G  116G  117G  50% /mnt/c
+D:\             245G   51G  194G  21% /mnt/d
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ du -sh
+0       .
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ mkdir -p ~/linux-git-assignment/practice-commands
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-dir$ cd ~/linux-git-assignment/practice-commands
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-commands$ script linux-practice-session.txt
+Script started, output log file is 'linux-practice-session.txt'.
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-commands$ ls -l
+total 0
+-rw-r--r-- 1 vaishnaviborase vaishnaviborase 0 Jun  8 15:27 linux-practice-session.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-commands$ nano linux-practice-session.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-commands$ nano linux-practice-session.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-commands$ git add practice-commands/linux-practice-session.txwarning: could not open directory 'practice-commands/practice-commands/': No such file or directory
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/practice-commands$
