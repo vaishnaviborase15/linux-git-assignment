@@ -59,4 +59,16 @@ remote:      https://github.com/vaishnaviborase15/linux-git-assignment/pull/new/
 remote:
 To github.com:Vaishnaviborase15/linux-git-assignment.git
  * [new branch]      new-feature-branch -> new-feature-branch
-vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git push origin --delete feature-branch
+setsockopt socket 3 IPV6_TCLASS 16: Operation not permitted
+setsockopt socket 3 IPV6_TCLASS 8: Operation not permitted
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:vaishnaviborase15/linux-git-assignment.git
+To github.com:Vaishnaviborase15/linux-git-assignment.git
+ - [deleted]         feature-branch
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git branch -D feature-branch
+Deleted branch feature-branch (was 66915da).
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ ls -l
+total 0
+-rw-r--r-- 1 vaishnaviborase vaishnaviborase 28 Jun  8 16:39 feature.txt
+-rw-r--r-- 1 vaishnaviborase vaishnaviborase 10 Jun  8 16:15 readme.txt
