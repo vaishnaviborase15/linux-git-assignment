@@ -1,4 +1,3 @@
-
 vaishnavi borse
 yash borse
 ashwini borse
@@ -7,4 +6,4 @@ swamini patil
 jagruti desale
 purva sonaje
 dipali mali
-
+this is nested-file.txt
