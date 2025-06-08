@@ -1,0 +1,20 @@
+# User and Group Management Task
+
+## ✅ Group Created
+Command: `sudo groupadd devteam`
+
+## ✅ User Created and Added to Group
+Command: `sudo useradd -m -s /bin/bash -g devteam vaishnavitest`
+
+## ✅ Password Set
+Command: `sudo passwd vaishnavitest`
+
+## ✅ User Added to sudo Group
+Command: `sudo usermod -aG sudo vaishnavitest`
+
+## ✅ Directory Created and Permissions Set
+Command:
+```bash
+sudo mkdir /opt/devproject
+sudo chown :devteam /opt/devproject
+sudo chmod 770 /opt/devprojec
