@@ -1,0 +1,26 @@
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ mkdir local-remote-repo
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ cd local-remote-repo
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/local-remote-repo$ git init --bare
+Initialized empty Git repository in /home/vaishnaviborase/linux-git-assignment/local-remote-repo/
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/local-remote-repo$ cd ..
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ mkdir project-repo
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ cd project-repo
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git init
+Initialized empty Git repository in /home/vaishnaviborase/linux-git-assignment/project-repo/.git/
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git remote add origin ../local-remote-repo
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ echo "Hello Git" > readme.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git add readme.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git commit -m "Add readme file"
+[main (root-commit) 0cde5dd] Add readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git branch -M master
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 76.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To ../local-remote-repo
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$
