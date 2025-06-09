@@ -1,0 +1,51 @@
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git checkout master
+Switched to branch 'master'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git pull origin master
+setsockopt socket 3 IPV6_TCLASS 16: Operation not permitted
+setsockopt socket 3 IPV6_TCLASS 8: Operation not permitted
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 1 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.91 KiB | 280.00 KiB/s, done.
+From github.com:Vaishnaviborase15/linux-git-assignment
+ * branch            master     -> FETCH_HEAD
+   0cde5dd..290ce3d  master     -> origin/master
+Updating 0cde5dd..290ce3d
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git push origin master
+setsockopt socket 3 IPV6_TCLASS 16: Operation not permitted
+setsockopt socket 3 IPV6_TCLASS 8: Operation not permitted
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 312 bytes | 78.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:vaishnaviborase15/linux-git-assignment.git
+To github.com:Vaishnaviborase15/linux-git-assignment.git
+   0cde5dd..71c60d4  master -> master
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git rm feature.txt
+rm 'feature.txt'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git commit -m "Remove feature.txt"
+[master b281038] Remove feature.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 feature.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git push origin master
+setsockopt socket 3 IPV6_TCLASS 16: Operation not permitted
+setsockopt socket 3 IPV6_TCLASS 8: Operation not permitted
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 244 bytes | 122.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:vaishnaviborase15/linux-git-assignment.git
+To github.com:Vaishnaviborase15/linux-git-assignment.git
+   71c60d4..b281038  master -> master
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$

@@ -1,0 +1,33 @@
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ cd user-management-commands
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ ls -a
+.  ..  .git  user_group_management.md
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo groupadd devgroup
+[sudo] password for vaishnaviborase:
+groupadd: group 'devgroup' already exists
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo groupadd testgroup2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo useradd -m -c "Test User 2" -G testgroup2 testuser2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo passwd testuser2
+New password:
+Retype new password:
+passwd: password updated successfully
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ id testuser2
+uid=1005(testuser2) gid=1007(testuser2) groups=1007(testuser2),1006(testgroup2)
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ groups testuser2
+testuser2 : testuser2 testgroup2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo usermod -aG sudo testuser2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo usermod -s /bin/bash testuser2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo usermod -L testuser2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo usermod -U testuser2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo touch /home/testuser2/testfile2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo chown testuser2:testgroup2 /home/testuser2/testfile2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo chmod 640 /home/testuser2/testfile2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ ls -l /home/testuser2/testfile2.txt
+ls: cannot access '/home/testuser2/testfile2.txt': Permission denied
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo ls -l /home/testuser2/testfile2.txt
+-rw-r----- 1 testuser2 testgroup2 0 Jun  8 13:31 /home/testuser2/testfile2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo ls -l /home/testuser2
+total 0
+-rw-r----- 1 testuser2 testgroup2 0 Jun  8 13:31 testfile2.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo chmod o+rx /home/testuser2
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/user-management-commands$ sudo ls -l /home/testuser2/testfile2.txt
+-rw-r----- 1 testuser2 testgroup2 0 Jun  8 13:31 /home/testuser2/testfile2.txt
