@@ -1,9 +1,0 @@
-vaishnavi borse
-yash borse
-ashwini borse
-akash shinde
-swamini patil
-jagruti desale
-purva sonaje
-dipali mali
-this is nested-file.txt

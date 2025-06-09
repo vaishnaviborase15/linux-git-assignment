@@ -1,6 +1,0 @@
-mkdir linux-basic-demo
-cd linux-basic-demo
-touch file1.txt
-mkdir dir1
-ls -l
-
