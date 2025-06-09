@@ -1,0 +1,202 @@
+vaishnaviborase@DESKTOP-7QRK0GV:~$ cd linux-git-assignment
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ ls
+Task-1-File_Permission          Task-7-Setup-Remote-Repo     local-remote-repo      terminal_practice.sh
+Task-10-Branching-Merging-Git   Task-8-Merge-Branches        practice-commands      user-management-commands
+Task-11-Practice-Git            Task-9-Undo-Last-Commit      practice-dir           user_group_management.md
+Task-2-Basic-Linux-Commands     basic-linux-commands         practice-terminal      user_group_management.md.save
+Task-3-Terminal-Practice        filename.txt                 practice-terminal.md   user_group_management.sh
+Task-4-User-Management          linux-basic-demo             practice-terminal.txt
+Task-5-Practice-Linux-Commands  linux-file-permissions-demo  project-repo
+Task-6-Git-Basics               linux-git-assignment         terminal-practice
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ Task-11-Practice-Git
+Task-11-Practice-Git: command not found
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment$ cd Task-11-Practice-Git
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   ../practice-terminal (untracked content)
+        modified:   ../terminal-practice (modified content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../linux-git-assignment/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ echo "This is a new file for Git practice." > practice-file.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git add practice-file.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git commit -m "Add practice-file.txt with initial content"
+[main df75870] Add practice-file.txt with initial content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Task-11-Practice-Git/practice-file.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git log --oneline --graph --decorate --all
+* df75870 (HEAD -> main) Add practice-file.txt with initial content
+* 1b1c7a0 Add practice-git.txt for Git command practice
+* f829beb Your message
+* e5358aa (origin/main) Create Task-10-Branching-Merging-Git
+* 0f3a6c5 Create Task-9-Undo-Last-Commit
+* ca3d83b Update Task-8-Merge-Branches
+* a4e64fc Create Task-8-Merge-Branches
+* 8eb1761 Task-7-Setup-Remote-Repo
+* c3ef0e2 Task-7-Setupe-Remote_Repo to Task-7-Setup-Remote-Repo
+* 813ea15 Create Task-7-Setupe-Remote_Repo
+* ae77281 Create Task-6-Git-Basics
+* 2ba38aa Create Task-5-Practice-Linux-Commands
+* fab0024 Create Task-4-User-Management
+* 3ecc6c3 Create Task-3-Terminal-Practice
+* ee66006 Create Task-2-Basic-Linux-Commands
+* 7a3ee7a Create Task-1-File_Permission
+* 621c48c Update Task-1-File_Permission
+* b60b29b Create Task-1-File_Permission
+* 6c7ce01 Initial commit for Linux-Git assignment
+* 8a2c362 Completed file and process management tasks
+* 2dd631b practice-terminal.txt
+* 25013ad Add terminal practice markdown file
+* c1d9a36 Add terminal practice markdown file
+* ef6ab7a Add Linux terminal practice files
+* 235efe2 Practiced basic Linux file commands
+* 2052b01 Initial commit
+* d0c50f8 Added user and group management task status
+* d32f646 Add terminal navigation and file operation practice script
+* 9530e38 Initial commit: practiced basic Linux commands and added files
+* cff3a09 Updated nested-file.txt content and permissions
+* 6af7c92 Updated file1.txt permissions and script
+* edcc808 Add chmod permission practice file and script
+* 606584a Add Linux file permissions demo files inside folder1
+* 86b1932 Added file1.txt and updated nested-file.txt with sample content
+* c878105 Completed Linux file permission task
+(END)
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git checkout -b practice-branch
+Switched to a new branch 'practice-branch'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ echo "Adding more practice content in the branch." >> practice-file.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git add practice-file.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git commit -m "Update practice-file.txt in practice-branch"
+[practice-branch c312406] Update practice-file.txt in practice-branch
+ 1 file changed, 1 insertion(+)
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git checkout main
+M       practice-terminal
+M       terminal-practice
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git merge practice-branch
+Updating df75870..c312406
+Fast-forward
+ Task-11-Practice-Git/practice-file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git add <conflicted-file>
+-bash: syntax error near unexpected token `newline'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   ../practice-terminal (untracked content)
+        modified:   ../terminal-practice (modified content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../linux-git-assignment/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git add filename.ext
+fatal: pathspec 'filename.ext' did not match any files
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git commit
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   ../practice-terminal (untracked content)
+        modified:   ../terminal-practice (modified content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../linux-git-assignment/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git branch -d practice-branch
+Deleted branch practice-branch (was c312406).
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git pull origin main --rebase
+setsockopt socket 3 IPV6_TCLASS 16: Operation not permitted
+Enter passphrase for key '/home/vaishnaviborase/.ssh/id_rsa':
+setsockopt socket 3 IPV6_TCLASS 8: Operation not permitted
+From github.com:vaishnaviborase15/linux-git-assignment
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git push origin main
+setsockopt socket 3 IPV6_TCLASS 16: Operation not permitted
+Enter passphrase for key '/home/vaishnaviborase/.ssh/id_rsa':
+setsockopt socket 3 IPV6_TCLASS 8: Operation not permitted
+Enumerating objects: 47, done.
+Counting objects: 100% (47/47), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (46/46), 14.17 KiB | 234.00 KiB/s, done.
+Total 46 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+To github.com:vaishnaviborase15/linux-git-assignment.git
+   e5358aa..c312406  main -> main
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git remote -v
+origin  git@github.com:vaishnaviborase15/linux-git-assignment.git (fetch)
+origin  git@github.com:vaishnaviborase15/linux-git-assignment.git (push)
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git checkout --orphan new-start
+M       practice-terminal
+M       terminal-practice
+Switched to a new branch 'new-start'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git checkout main
+M       practice-terminal
+M       terminal-practice
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git branch -D new-start
+error: branch 'new-start' not found
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git diff
+diff --git a/terminal-practice b/terminal-practice
+--- a/terminal-practice
++++ b/terminal-practice
+@@ -1 +1 @@
+-Subproject commit d32f64682143d2f18311e274c97d12c398732c20
++Subproject commit d32f64682143d2f18311e274c97d12c398732c20-dirty
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git log -- practice-file.txt
+commit c31240600e376a5221f1174d5405de8da45580b0 (HEAD -> main, origin/main)
+Author: vaishnaviborase15 <vaishnaviborase.clg@gmail.com>
+Date:   Mon Jun 9 03:52:45 2025 +0000
+
+    Update practice-file.txt in practice-branch
+
+commit df758703b37ab7436aa310b38c2e179f5611c8e1
+Author: vaishnaviborase15 <vaishnaviborase.clg@gmail.com>
+Date:   Mon Jun 9 03:44:14 2025 +0000
+
+    Add practice-file.txt with initial content
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git reset --soft HEAD~1
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$ git reset HEAD~1
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/Task-11-Practice-Git$
