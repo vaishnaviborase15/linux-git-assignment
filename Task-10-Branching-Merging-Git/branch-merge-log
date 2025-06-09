@@ -1,0 +1,50 @@
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git add .
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git commit -m "Work on feature branch"
+On branch feature-branch
+nothing to commit, working tree clean
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git checkout master
+Switched to branch 'master'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git merge feature-branch
+Already up to date.
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ echo "This is a feature update" >> feature.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git add feature.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git add feature.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git commit -m "Add feature.txt on feature-branch"
+[master c2b7de7] Add feature.txt on feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git checkout master
+Already on 'master'
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git merge feature-branch
+Already up to date.
+
+#For more Conflicts
+CONFLICT (content): Merge conflict in filename.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+<<<<<<< HEAD
+Your code on master branch
+=======
+Code from feature-branch
+>>>>>>> feature-branch
+
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git add filename.txt
+#For more Conflicts
+CONFLICT (content): Merge conflict in filename.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+<<<<<<< HEAD
+Your code on master branch
+=======
+Code from feature-branch
+>>>>>>> feature-branch
+
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git add filename.txt
+[master c2b7de7] Add filename.txt on feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 filename.txt
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git commit -m "Resolved merge conflict between master and feature-branch"
+vaishnaviborase@DESKTOP-7QRK0GV:~/linux-git-assignment/project-repo$ git push origin master
+Already up to date.
